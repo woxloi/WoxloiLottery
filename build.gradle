@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.8.0-RC'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'  // ← ここを追加
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 group = 'red.man10'
@@ -9,12 +9,8 @@ version = '2.0'
 
 repositories {
     mavenCentral()
-    maven { name = 'papermc-repo'
-        url = 'https://repo.papermc.io/repository/maven-public/'
-    }
-    maven {
-        url 'https://jitpack.io'
-    }
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://jitpack.io' }
 }
 
 dependencies {
@@ -29,10 +25,9 @@ dependencies {
 
 def targetJavaVersion = 17
 java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    sourceCompatibility = javaVersion
-    targetCompatibility = javaVersion
-    if (JavaVersion.current() < javaVersion) {
+    sourceCompatibility = JavaVersion.toVersion(targetJavaVersion)
+    targetCompatibility = JavaVersion.toVersion(targetJavaVersion)
+    if (JavaVersion.current() < JavaVersion.toVersion(targetJavaVersion)) {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     }
 }
@@ -51,14 +46,16 @@ processResources {
         expand props
     }
 }
+
 compileKotlin {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
+
 compileTestKotlin {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
