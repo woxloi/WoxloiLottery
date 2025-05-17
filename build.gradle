@@ -51,26 +51,17 @@ processResources {
         expand props
     }
 }
-
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
-
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
 
-// ここはshadowJarがデフォルトでfat jar作るので無くてもOKですが、念のため
 shadowJar {
-    archiveBaseName.set("WoxloiLottery") // jar名を指定
-    archiveVersion.set(version.toString())
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
-jar {
-    enabled = false // fat jarはshadowJarが作るので通常のjarは無効化してもOK
+    archiveFileName.set("${project.name}-${project.version}.jar")
 }
