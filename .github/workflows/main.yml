@@ -4,14 +4,14 @@ on:
   push:
     branches: [ master ]
     tags:
-    - v*
+      - v*
+
 env:
-  GITHUB_USERNAME: ${{secrets.USERNAME}}
-  GITHUB_TOKEN: ${{secrets.TOKEN}}
+  GITHUB_USERNAME: ${{ secrets.USERNAME }}
+  GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -26,12 +26,10 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew shadowJar
-   
+      run: ./gradlew shadowJar --stacktrace --info
+
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
         name: WoxloiLottery-1.0-SNAPSHOT.jar
         path: build/libs/WoxloiLottery-1.0-SNAPSHOT.jar
-
-    
