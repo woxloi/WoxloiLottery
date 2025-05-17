@@ -1,0 +1,10 @@
+name: WoxloiLottery
+version: '1.0-SNAPSHOT'
+main: red.man10.woxloiLottery.WoxloiLottery
+api-version: '1.19'
+authors: [ woxloi ]
+commands:
+  wlottery:
+  wlot:
+
+

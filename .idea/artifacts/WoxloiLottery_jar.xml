@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WoxloiLottery:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WoxloiLottery_jar</output-path>
+    <root id="archive" name="WoxloiLottery.jar">
+      <element id="module-output" name="WoxloiLottery.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.8.0-RC/a7cf122e1037864db5d2dcf416b14726547c0cad/kotlin-stdlib-1.8.0-RC.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.8.0-RC/28723de1d973029ea16c267e0e66414a4876d68a/kotlin-stdlib-jdk8-1.8.0-RC.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.8.0-RC/e831a5b4676e777fba137ee1740cdb34d8682a12/kotlin-stdlib-jdk7-1.8.0-RC.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.8.0-RC/37e5dd045f0a828a592107b3d79e9b76132da8c/kotlin-stdlib-common-1.8.0-RC.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.5.2/f4cc07a50437659e0043e7da762809a46932b6a0/kotlinx-coroutines-core-jvm-1.5.2.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
